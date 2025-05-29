@@ -1,0 +1,74 @@
+
+
+ <!-- ATTN: Always work from small to big! If you code big things first it will be harder to do media queries-->
+
+ <!-- Use min with and make your mobile first. min width gives breakpoints for bigger size (everything bigger than your min width is affected)-->
+
+ <!-- Use Containers so mobile doesn't touch the edge! -->
+  
+ <!-- If you need a div to be 100% and bigger than the containers 95%, use width 100% vpw and make a negative margin left = to half of the margin of the container (i.e = 95% width means margin is 2.5% to the left, so -2.5%)-->
+
+ <!-- Use a typography section in your css to select h1, p, unstyled-list, and other tags/classes. This will help you keep consistency throughout the page and reduce repitition, for anything related to the style of text, use typography section in CSS -->
+
+ <!-- It's okay to use multiple classes, don't be scared to do it. For example, if you have a "title" class with fontsize margin fontweight so on, and you have a section where you want to remove the margin, instead of making it a totally different name, keep the "title" class and ontop of that add a "title-service" class which removes the margin. Add this in your typography section -->
+
+ <!-- To select classes that start with the same name, use [class^=(what you want to select)]. As an example, lets say you have classes like col-1, col-2, col-3. If you want to select all your col classes, use [class^=col-] this will select all classes that start with "col-" To select the first or last of classes that start with the same name, use :first-child or :last-child-->
+
+ <!-- Figure tag helps your image stay related with your text (figcaption tag)  -->
+
+ <!-- Give your image display:block to remove the white space at bottom (spaced used to account for text accents, ex the stick on the letter "p")-->
+
+ <!-- REM is root size, EM is size relative to container. (So id your class's font size is 2rem, .5em means half the size of the class size (1rem). For example if you want a title with 2 different sizes you can do h1 with a span class INSIDE of the h1. Display block the span to put it on its own block ) -->
+
+ <!-- DON'T use buttons, instead give an A tag the class of button, give it a boarder and add padding to increase the area of the button (where the user can press to use it). Use "Display: inline-block" -->
+
+<!-- Put media queries at the end of each section. Example: Home-about media querie at the end of Home about css-->
+
+<!-- Give your hero 100 vph at desktop sizes and give the section. Give it a padding top to center the text, for example "padding top 35vph"-->
+
+<!-- Use outline and outline-offset for boarders you can shrink and grow (- offset for shrink, positive offset for grow)-->
+
+<!-- To put text over a box outline use position absolute on the h1, then put the top until the line intersects the letters in the middle (use em for this) then left 50% and transform: trasnlateX(-50%)-->
+
+<!-- Box-shadow: 0 0 3rem(blur) 0(spread) rgba (0 , 0 , 0, .25(transparency) )(color) -->
+
+<!-- Use :last-of-type to select the last element in a list of elements. For example if you have 3 P tags in a row, you can select the last one and remove the bottom border-->
+
+<!-- How to have a grid that changes sizes at different break points: To make a grid responsive, change the item size to "50%" and use a "float" attribute to have the next image snap next to it. If you want to have 3 items in a row make the width "33.333334%" and do the same-->
+ 
+<!-- After you float, you must clearfix so that your text doesn't wrap around the image. use the .clearfix class if you are having issues-->
+
+<!-- transform: translate lets you move items along an axis. x axis and y axis. Use a percentage there. If you want to hide an element until hover, move it off using the y acis (so transform: translateY(150%), then give the item overflow hidden property. On hover, use the same property but this time make it 0%, so the item comes back on screen upon hover. The transition asset allows you to give it a smooth transition-->
+
+<!-- For bigger screens footer: Use "col-" as a tag for all your columns. Float everything to align it well. Columns should have a higher number the bigger you want them to be. so for example if you want 4 columns, 3 which are a list and 1 which is a bigger text area or input area, you can divide the sections into their appropriate sizes. Example: the 3 list all have the col-1 tag, and are divided into 3 sections each being 16.666% wide. The bigger section has a col-3 tag that can be 50% wide. This will give you 100% width and make each column take up the right amount of space. Use a column section for this as it may become useful later in the page. -->
+
+<!-- Look up parallax effect.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="icon" type="image/x-icon" href="/assets/Favicon.png">
+    <title>Sparta Construction</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    
+    <%- include("partials/header.ejs") %>
+
+    <main id="content">
+        <%- include(content) %>
+    </main>
+
+    <%- include("partials/footer.ejs") %>
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
