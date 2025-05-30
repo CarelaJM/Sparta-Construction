@@ -462,7 +462,7 @@ p{
 .Home-services-image{
   margin: 0 auto;
   width: 80%;
-  height: 20vh;
+  height: 35vh;
   background-size: cover;
   background-position: center;
   background-repeat: none;
@@ -508,8 +508,9 @@ p{
   background-size: cover;
   background-repeat: no-repeat;
   border: solid 2px black;
-  height: 20vh;
+  height: 35vh;
   width: 70vw;
+  border-radius: .5rem;
 }
 
 .Home-services-exterior{
@@ -702,6 +703,154 @@ p{
     border-color: black;
   }
 }
+
+/* --- Home About Section --- */
+.Home-about {
+    padding: 40px 20px;
+    background-color: #ffffff;
+    color: #333;
+}
+
+.Home-about__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap; /* Keeps wrapping behavior for very narrow but not quite mobile screens */
+    align-items: center;
+    gap: 30px; /* Adjust gap if needed with new proportions */
+}
+
+.Home-about__text-content {
+    flex: 1 1 65%; /* MODIFIED: Increased space for text */
+    min-width: 300px; /* Or adjust if it causes issues with the new flex basis */
+}
+
+.Home-about__title {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.Home-about__intro,
+.Home-about__quality {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin: 3rem 0;
+}
+
+.Home-about__quality-highlight {
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+.Home-about__image-gallery {
+    flex: 1 1 30%; /* MODIFIED: Decreased space for image gallery, making images smaller */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 250px; /* MODIFIED: You might want to reduce min-width slightly if the gallery becomes very narrow */
+}
+
+.Home-about__image-placeholder {
+    width: 100%; /* This will now be 100% of a smaller parent gallery */
+    background-color: #ddd;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.Home-about__image-placeholder--primary {
+    aspect-ratio: 16 / 10;
+    border: 2px solid var(--primary-color);
+}
+
+.Home-about__image-placeholder--secondary {
+    aspect-ratio: 4 / 3;
+    border: 2px solid var(--secondary-color);
+}
+
+.Home-about__image-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.Home-about__image-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.Home-about__image-placeholder:hover .Home-about__image-caption {
+    opacity: 1;
+}
+
+
+/* --- Responsive Adjustments (These remain unchanged) --- */
+@media (max-width: 768px) {
+    .Home-about__container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .Home-about__text-content,
+    .Home-about__image-gallery {
+        flex-basis: 100%; /* Full width on mobile, so image sizes here are relative to screen width */
+    }
+
+    .Home-about__title {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .Home-about__intro,
+    .Home-about__quality {
+        font-size: 1rem;
+        text-align: justify;
+    }
+
+    .Home-about__image-gallery {
+       flex-direction: row;
+       flex-wrap: wrap;
+       justify-content: center;
+    }
+
+    .Home-about__image-placeholder {
+        width: calc(50% - 10px);
+    }
+
+    @media (max-width: 480px) {
+        .Home-about__image-gallery {
+            flex-direction: column;
+            align-items: center;
+        }
+        .Home-about__image-placeholder {
+            width: 90%;
+        }
+        .Home-about__image-placeholder--primary {
+            margin-bottom: 20px; /* Only if secondary is present and stacked */
+        }
+    }
+}
+
+
+
+
+
+
+
+
 
 /* Contact form
 ===============*/
