@@ -55,6 +55,37 @@ footer::after{
 /* Column
 =========*/
 
+.col-3{
+  display: flex;
+  flex-direction: column;
+}
+
+.col-2{
+  display: flex;
+  flex-direction: column;
+}
+
+.col-1{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+@media (min-width: 40rem){
+.col-3{
+  width: 36.666%;
+}
+
+.col-2{
+  width: 30%;
+}
+
+.col-1{
+  width: 16.666%;
+}
+
+}
+
 
 
 /* Typography
@@ -425,6 +456,42 @@ p{
   padding: 3rem 0; 
 }
 
+.HP-Services-Body{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2rem 0px;
+  width: 100%;
+}
+
+.HP-Services-Body a{
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+  width: 60%;
+}
+
+.HP-Services-Body button{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  border: none;
+  background: none;
+}
+
+.HP-Services-Body img{
+  width: 100%;
+}
+
+.HP-Services-Body h4{
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
 .Home-services-intro{
   background-image: url('/assets/Background-1.png');
   background-size: contain;
@@ -454,78 +521,10 @@ p{
 }
 
 .Home-services-intro p{
-  width: 80%;
-  margin: 1rem auto;
-}
-
-.Home-services-intro span,
-.Home-services-image{
-  margin: 0 auto;
-  width: 80%;
-  height: 35vh;
-  background-size: cover;
-  background-position: center;
-  background-repeat: none;
-  border-radius: .5rem;
-  border: 2px solid black;
-}
-
-.Home-services-intro span{
-  background-image: url('/assets/Manuel-4.jpeg');
-}
-
-.Home-services-title{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 95%;
-}
-
-.Home-services-image{
- background-image: url('/assets/Manuel-1.jpeg');
-}
-
-.Home-services-box{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
   width: 90%;
-  padding: 1rem 1rem;
-  border: solid 2px black;
-  border-radius: .5rem;
-  gap: 1rem;
-  text-align: center;
-  margin: 1rem 0;
-  height: 4rem;
-  overflow: hidden;
-}
-
-.Home-services-exterior,
-.Home-services-interior,
-.Home-services-outdoor{
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  border: solid 2px black;
-  height: 35vh;
-  width: 70vw;
-  border-radius: .5rem;
-}
-
-.Home-services-exterior{
-  background-image: url('/assets/Manuel-3.jpg');
-  border-color: var(--primary-color);
-}
-
-.Home-services-interior{
-  background-image: url('/assets/Manuel-2.jpeg');
-  border-color: var(--secondary-color);
-}
-
-.Home-services-outdoor{
-  background-image: url('/assets/Manuel-5.jpeg');
-  border-color: var(--tertiary-color);
+  margin: 1rem auto;
+  font-size: 1.1rem;
+  line-height: 1.7rem;
 }
 
 .Home-services .button{
@@ -533,182 +532,135 @@ p{
   margin: 1.5rem auto;
 }
 
+@media (min-width:40rem){
+
+.HP-Services-Body{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 6rem 0px;
+  width: 100%;
+}
+
+.HP-Services-Body a{
+  display: flex;
+  justify-content: center;
+  margin: 0 4%;
+  width: 25%;
+  opacity: 55%;
+}
+
+.HP-Services-Body a:hover{
+  opacity: 100%;
+  transition: 0.5s;
+}
+
+.HP-Services-Body button:hover{
+  cursor: pointer;
+}
+
+.HP-Services-Body button{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  border: none;
+  background: none;
+}
+
+.HP-Services-Body img{
+  width: 100%;
+}
+
+.HP-Services-Body h4{
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.Home-services-intro p{
+  width: 60%;
+}
+
+.Home-services-intro{
+  background-image: url('/assets/Background-1.png');
+}
+}
 
 
+
+
+/* Home Roofing
+================*/
+
+.Home-roofing{
+  display: flex;
+  align-items: stretch;
+  background-color: white;
+}
+
+.Home-roofing-body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  margin: 1rem 0;
+  gap: 2rem;
+  text-align: center;
+}
+
+.Home-roofing-body-text{
+  width: 80%;
+  font-size: 1.3rem;
+}
+
+.Home-roofing-body span{
+  color: var(--primary-color);
+}
+
+.Home-roofing-body .floating-button{
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.Home-roofing-img{
+  background-image: url('/assets/Background-4.png');
+  background-size: cover;
+  width: 40%;
+}
 
 @media (min-width: 40rem){
-  .Home-services{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 3rem 0; 
-    gap: 2rem 0;
+
+  .Home-roofing-body{
+    margin: 2rem;
   }
 
-  .Home-services-intro{
-    background-image: none;
-  }
-
-  .Home-services-intro, 
-  .Home-services-holder{
-    display: flex; 
-    flex-direction: row;
-    width: 95%;
-  }
-
-  .Home-services-intro > div,
-  .Home-services-holder > div{
-    display: flex;
-    flex-direction: row;
-    width: 50%;
-    height: 55vh;
-    align-items: center;
-    gap: .5rem;
-  }
-
-  .Home-services-intro > div{
-    flex-direction: column;
-    justify-content: center;
-    align-items: end;
-  }
-
-  .Home-services-intro p{
-    width: 70%;
-    margin: 1rem auto;
-  }
-
-  .Home-services-intro span,
-  .Home-services-image{
-    margin: 0 auto;
-    width: 80%;
-    height: 90%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: none;
-    border-radius: .5rem;
-    border: 2px solid black;
-  }
-
-  .Home-services-intro span{
-    background-image: url('/assets/Manuel-4.jpeg');
-  }
-
-  .Home-services-image{
-    background-image: url('/assets/Manuel-1.jpeg');
-  }
-
-  .Home-services-holder span{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 10%;
-    padding: 0 2%;
-    height: 90%;
-    border: solid 2px black;
-    border-radius: .5rem;
-  }
-
-  .Home-services-holder span:hover{
+  .Home-roofing-body-text{
+    font-size: 2rem;
     width: 60%;
-    justify-content: space-evenly;
-    transition: 0s;
+    color: var(--primary-color);
   }
 
-  .Home-services-title{
-    width: fit-content;
+  .Home-roofing-body p{
+    font-size: 1rem;
+    line-height: 1.7rem;
+    width: 70%;
+    margin: 0 auto;
   }
 
-  .Home-services-holder h3{
-    transform: rotate(-90deg);
-  }
-
-  .Home-services-holder .plus-minus{
-    display: none;
-  }
-
-  .Home-services-exterior,
-  .Home-services-interior,
-  .Home-services-outdoor,
-  .Home-services-holder a,
-  .Home-services-holder p{
-    width: 0;
-    height: 0;
-    overflow: hidden;
-    padding: 0;
-  }
-
-  .Home-services-exterior,
-  .Home-services-interior,
-  .Home-services-outdoor{
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border: none;
-  }  
-  
-  .Home-services-holder span:hover .Home-services-exterior,
-  .Home-services-holder span:hover .Home-services-interior,
-  .Home-services-holder span:hover .Home-services-outdoor{
-    transition: 0s;
-    width: 50%;
-    height: 45%;
-    border-radius: .5rem;
-    border: 2px solid black;
-  } 
-
-  .Home-services-exterior{
-    background-image: url('/assets/Manuel-3.jpg');
-    border-color: var(--primary-color);
-  }
-
-  .Home-services-interior{
-    background-image: url('/assets/Manuel-2.jpeg');
-    border-color: var(--secondary-color);
-  }
-
-  .Home-services-outdoor{
-    background-image: url('/assets/Manuel-5.jpeg');
-    border-color: var(--tertiary-color);
-  }
-
-  .Home-services-holder span:hover h3{
-    transform: rotate(0deg);
-    transition: 0s;
-  }
-
-  .Home-services-holder span:hover p{
-    transition: 2s;
-    width: fit-content;
-    height: fit-content;
-    text-align: center;
-  }
-
-
-
-  .Home-services-holder span:hover a{
-    transition: 0s;
-    width: fit-content;
-    height: fit-content;
-  }
-
-  .Home-services .button{
+  .Home-roofing-body .floating-button{
     font-size: 1.7rem;
-    margin: 3rem auto;
-  }
-
-  .Home-services .button:hover{
-    background-color: black;
-    color: white;
-    border-color: black;
   }
 }
+
+
+
+
 
 /* --- Home About Section --- */
 .Home-about {
     padding: 40px 20px;
-    background-color: #ffffff;
-    color: #333;
 }
 
 .Home-about__container {
@@ -721,8 +673,12 @@ p{
 }
 
 .Home-about__text-content {
-    flex: 1 1 65%; /* MODIFIED: Increased space for text */
-    min-width: 300px; /* Or adjust if it causes issues with the new flex basis */
+  flex: 1 1 65%; /* MODIFIED: Increased space for text */
+  min-width: 300px; /* Or adjust if it causes issues with the new flex basis */
+  background-image: url('/assets/Background-5.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .Home-about__title {
@@ -763,7 +719,7 @@ p{
 
 .Home-about__image-placeholder--primary {
     aspect-ratio: 16 / 10;
-    border: 2px solid var(--primary-color);
+    border: 2px solid var(--secondary-color);
 }
 
 .Home-about__image-placeholder--secondary {
@@ -817,7 +773,6 @@ p{
     .Home-about__intro,
     .Home-about__quality {
         font-size: 1rem;
-        text-align: justify;
     }
 
     .Home-about__image-gallery {
@@ -855,48 +810,82 @@ p{
 /* Contact form
 ===============*/
 
+.contact-title{
+  text-align: center;
+  margin: 2rem 0;
+}
+
 .contact-title div{
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-weight: 500;
+  margin-bottom: 2rem;
 }
 
 .contact-title span{
-  font-size: 1.3rem;
+  font-size: 1.2rem;
+  color: var(--primary-color);
 }
 
 .contact-title img{
-  width: 3rem;
+  width: 5rem;
   margin: 0 .75rem;
 }
 
 .contact-info-holder{
   display: flex;
+  flex-direction: column;
 }
 
 .contact-info-box{
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
+  align-items: center;
+  width: 100%;
+  gap: .75rem;
+  margin: .75rem 0;
+}  
 
 .contact-info-box img{
-  width: 5rem;
+  width: 3rem;
 }
 
 form{
   display: flex;
   flex-direction: column;
+  width: 100%;
+  padding: 2rem 0;
+}
+
+form span{
+  text-align: center;
+  width: 100%;
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin: 2rem 0;
+}
+
+input,
+textarea,
+.custom-select,
+label{
+  margin: auto;
   width: 90%;
+}
+
+
+input,
+textarea,
+.custom-select{
+  margin: 1rem auto;
 }
 
 input,
 textarea{
-  margin: 1rem 0;
-  padding: .8rem;
   border: 1px solid black;
+  padding: .8rem; 
+  border-radius: .5rem;
 }
 
 input:focus{
@@ -904,7 +893,8 @@ input:focus{
 }
 
 textarea{
-  resize: none;
+  resize: vertical;
+  padding: 2rem;
 }
 
 form button{
@@ -916,6 +906,7 @@ form button{
   gap: .5rem;
   background-color: white;
   border: 2px solid black;
+  margin-left: 5%;
 }
 
 form button:hover{
@@ -928,21 +919,244 @@ form button img{
   width: 1.5rem;
 }
 
+@media (min-width: 40rem){
+
+  .contact-title div{
+    font-size: 2rem;
+  }
+
+  .contact-title span{
+    font-size: 1.7rem;
+  }
+
+  .contact-info-holder{
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 7rem;
+  }
+
+  .contact-info-box{
+    flex-direction: column;
+    width: 50%;
+  }
+
+  .contact-info-box img{
+    width: 30%;
+  }
+
+  .contact-info-info{
+    font-size: .9rem;
+  }
+
+  .contact-info-title{
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+
+  .contact-info{
+    width: 50%;
+  }
+
+  form{
+    width: 50%;
+  }
+}
 
 
-/* Contact page
-===============*/
+/* Services page
+================*/
 
-.Contact-page{
+.Services-page{
+  padding: 6rem 0 4rem;
+}
+
+.Service-page-body{
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  row-gap: 4rem;
+  margin: 2rem 0;
+  
+}
+
+.Service-page-item{
+  width: 90%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  border-radius: .75rem;
+  background-color: white;
+  gap: 1rem;
+  margin: 0 auto;
+  padding-bottom: 1rem;
+  box-shadow: 5px 10px 8px #888888;
+}
+
+.Service-page-item img{
+  width: 100%;
+  height: 15rem;
+  object-fit: cover;
+  border-top-left-radius: .75rem;
+  border-top-right-radius: .75rem;
+}
+
+.Service-page-item-title{
+  font-size: .9rem;
+  text-align: right;
+  margin: 0 5% 0 2.5%;
+}
+
+.e{
+  color: var(--primary-color);
+}
+
+.i{
+  color: var(--secondary-color);
+}
+
+.o{
+  color: var(--tertiary-color);
+}
+
+.Service-page-item-text{
+  text-align: right;
+  margin: 0 5% 0 2.5%;
+  line-height: 1.7rem;
+}
+@media (min-width: 40rem){
+
+  .Services-page{
+    padding: 2rem 0;
+  }
+
+  .Service-page-body{
+    flex-direction: row;
+    margin: 4rem 0;
+  }
+
+  .Service-page-item{
+    width: 30%;
+  }
 }
 
 
 
 
 
+
+
+/* Contact page
+===============*/
+
+.Contact-buffer{
+  padding: 2rem;
+  background-color: white;
+}
+
+.Contact-page{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  border-radius: .5rem;
+}
+
+@media (min-width: 40rem){
+  .Contact-page{
+    flex-direction: row;
+    align-items: stretch;
+    width: 90%;
+    margin: 6rem auto;
+    padding: 0;
+  }
+}
+
+
+
+
+
+
+/* Footer
+=========*/
+
+footer{
+  background-color: white;
+}
+
+.Footer-icon-holder{
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2rem 0;
+}
+
+.Footer-icon-holder a{
+  width: 10%;
+}
+
+@media (min-width: 40rem){
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  width: 100%;
+  padding: 4rem 2.5%;
+  gap: 0;
+  justify-content: space-around;
+}
+
+.footer-branding {
+  align-items: center;
+  color: var(--secondary-color);
+  font-size: 1.7rem;
+  font-weight: 700;
+  gap: 5rem;
+  line-height: 3rem;
+}
+
+.footer-branding img{
+  width: 70%;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.footer-nav > span {
+  display: flex;
+  align-items: center;
+  word-break: break-word;
+  width: 85%;
+  flex-direction: row;
+}
+
+.footer-nav span:first-child {
+  font-weight: 700;
+  color: var(--primary-color);
+  padding-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.footer-nav:last-child span {
+  width: 70%;
+}
+
+.footer-nav > span > img {
+  width: 3rem;
+  padding-right: .5rem;
+}
+
+.footer-nav a:hover {
+  color: var(--secondary-color);
+}
+
+.footer-bot {
+  padding: .8rem 0;
+  font-size: .8rem;
+  display: flex;
+  justify-content: center;
+  gap: .8rem;
+}
+}
 
 
 
@@ -957,6 +1171,7 @@ form button img{
   align-items: center;
   justify-content: center;
   font-size: .8rem;
+  background-color: var(--grey-color);
 }
 
 .Koi-tag a{

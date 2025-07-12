@@ -10,6 +10,26 @@
 
 <section class="Home-services">
     <h2 class="logo-font"><img src="/assets/Crest-left.png" class="crest">Our Services<img src="/assets/Crest-right.png" class="crest"></h2>
+    <div class="HP-Services-Body">        
+        <a href="/exterior">
+         <button>
+            <h4>Exterior Repairs</h4>
+            <img src="/assets/Exterior-1.png" alt="Beautiful apartment Kitchen">
+         </button>
+        </a>
+        <a href="/interior"> 
+         <button>
+            <h4>Interior Design</h4>
+            <img src="/assets/Interior-1.png" alt="Beautiful apartment Kitchen">
+         </button>
+        </a>
+        <a href="/outdoor">
+         <button>
+            <h4>Landscaping work</h4>
+            <img src="/assets/Outdoor-1.png" alt="Beautiful apartment Kitchen">
+         </button>
+        </a>
+    </div>
     <div class="Home-services-intro">
       <div>
         <p>
@@ -19,57 +39,19 @@
             You can always count on us for clear communication, dependable service, and a job done with care. We show up ready to work, respect your space, and don't cut corners. Our goal is to leave you with results you'll be proud of and an experience that makes us your first call for future projects.
         </p>
       </div>
-      <div>
-        <span class="desktop"></span>
-      </div>
-    </div>
-    <div class="Home-services-holder">
-        <div>
-            <div class="Home-services-image"></div>
-        </div>
-        <div>
-            <span class="Home-services-box" style="border-color: var(--primary-color);">
-                <div class="Home-services-title">
-                    <div class="mobile"></div>
-                    <h3 class="logo-font">Exterior    
-                    </h3>
-                    <div class="plus-minus" onclick="plusMinus(this)">
-                        <div class="plus-bar"></div>
-                        <div class="minus-bar"></div>
-                    </div>
-                </div>
-                <div class="Home-services-exterior"></div>
-                <p>Windows, Roofing & Siding, Doors, Waterproofing, Exterior Painting</p>
-            </span>
-            <span class="Home-services-box" style="border-color: var(--secondary-color);">
-                <div class="Home-services-title">
-                    <div class="mobile"></div>
-                    <h3 class="logo-font">Interior    
-                    </h3>
-                    <div class="plus-minus" onclick="plusMinus(this)">
-                        <div class="plus-bar"></div>
-                        <div class="minus-bar"></div>
-                    </div>
-                </div>
-                <div class="Home-services-interior"></div>
-                <p>Painting, Plumbing, Flooring, Remodeling, Electrical, Handyman services</p>
-            </span>
-            <span class="Home-services-box" style="border-color: var(--tertiary-color);">
-                <div class="Home-services-title">
-                    <div class="mobile"></div>
-                    <h3 class="logo-font">Exterior    
-                    </h3>
-                    <div class="plus-minus" onclick="plusMinus(this)">
-                        <div class="plus-bar"></div>
-                        <div class="minus-bar"></div>
-                    </div>
-                </div>
-                <div class="Home-services-outdoor"></div>
-                <p>Landscaping, Tree & Bush trimming, Decks, Concrete, Irrigation, Fences</p>
-            </span>
-        </div>
     </div>
     <a class="button" href="/contact">Schedule now</a>
+</section>
+
+<section class="Home-roofing">
+    <div class="Home-roofing-body">
+        <div class="Home-roofing-body-text">Ask about our roofing services and <span>special offers!</span></div>
+        <div class="desktop">
+            <p>Is your roof ready for anything nature throws its way? At Sparta Construction, we don't just put on roofs, we build lasting protection and peace of mind. Our team delivers top-notch quality and meticulous craftsmanship on every single roofing project. Get in touch for a free estimate!</p>
+        </div>
+        <a href="/contact" class="floating-button">Contact us!</a>
+    </div>
+    <div class="Home-roofing-img"></div>
 </section>
 
 <section class="Home-about">
@@ -96,11 +78,71 @@
     </div>
 </section>
 
-
-
 <img src="/assets/Koi-logo.png" alt="">
 
-<img src="/assets/Koi-logo.png" alt="">
+<section class="Contact-page">
+    <div class="contact-info">
+        <div class="contact-title">
+            <div class="logo-font"><img src="/assets/Logo.png" alt="Logo"> Sparta Construction</div>
+            <span>Contact Info</span>
+        </div>
+        <div class="contact-info-holder">
+            <div class="contact-info-box">
+                <img src="/assets/Phone.png" alt="Phone Icon">
+                <span class="contact-info-title desktop">Number</span>
+                <span class="contact-info-info">(240)-764-9968</span>
+            </div>
+            <div class="contact-info-box">
+                <img src="/assets/Email.png" alt="Email Icon">
+                <span class="contact-info-title desktop">Email</span>
+                <span class="contact-info-info">Info@SpartaConstructionDMV.com</span>
+            </div>
+            <div class="contact-info-box">
+                <img src="/assets/Clock.png" alt="Email Icon">
+                <span class="contact-info-title desktop">Hours</span>
+                <span class="contact-info-info">24/7 Service</span>
+            </div>
+            <div class="contact-info-box">
+                <img src="/assets/Location.png" alt="Email Icon">
+                <span class="contact-info-title desktop">Location</span>
+                <span class="contact-info-info">Servicing the DMV area</span>
+            </div>
+        </div>
+    </div>
+    <form method="POST" id="form">
+    <span>Reach out to us directly!</span>
+    <input type="hidden" name="access_key" value="d97bfcb5-0fbb-43b7-b4ec-e3e4bc3e0c59">
+    <label for="name">Name</label>
+    <input type="text" name="name" placeholder="Your name" required>
+    <label for="Phone">Phone</label>
+    <input type="tel" name="phone" placeholder="Your number" required>
+    <label for="email">Email</label>
+    <input type="email" name="email" placeholder="Your email" required>
+    <label for="email">Select Service</label>
+            <div class="custom-select">
+            <select name="job-type" id="job-type">
+                <option value="N/A" selected>Select Service:</option>
+                <option value="Drywall">Drywall</option>
+                <option value="Electrical">Electrical</option>
+                <option value="Flooring">Flooring</option>
+                <option value="Outdoor">Outdoor</option>
+                <option value="Painting">Painting</option>
+                <option value="Plumbing">Plumbing</option>
+                <option value="Repairs">Repairs</option>
+                <option value="Roofing">Roofing</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+    <label for="message">Message</label>
+    <textarea name="message" placeholder="Tell us more..."></textarea>
+    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+    <button type="submit">Submit Form <img src="/assets/Logo-black.png" alt=""></button>
+
+    <div id="result"></div>
+
+    </form>
+</section>
 
 <img src="/assets/Koi-logo.png" alt="">
 

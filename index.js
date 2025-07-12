@@ -16,7 +16,7 @@ app.get('/', (req, res) => {
 // Dynamic routes for each page
 app.get('/:page', (req, res) => {
     const page = req.params.page;
-    const allowedPages = ['about', 'home', 'reviews', 'services', 'contact']; // List of valid pages
+    const allowedPages = ['about', 'home', 'reviews', 'services', 'contact', 'interior', 'exterior', 'outdoor']; // List of valid pages
 
     if (allowedPages.includes(page)) {
         if (req.xhr) {

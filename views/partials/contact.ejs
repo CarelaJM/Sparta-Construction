@@ -1,30 +1,58 @@
+<div class="Contact-buffer mobile"></div>
+
 <section class="Contact-page">
-    <div class="">
+    <div class="contact-info">
         <div class="contact-title">
-            <span>Contact Us</span>
-            <div class="logo-font"><img src="/assets/Logo.png" alt=""> Sparta Construction</div>
+            <div class="logo-font"><img src="/assets/Logo.png" alt="Logo"> Sparta Construction</div>
+            <span>Contact Info</span>
         </div>
         <div class="contact-info-holder">
             <div class="contact-info-box">
-                <img src="/assets/Phone.png" alt="">
-                <span class="contact-info-title">Phone Number</span>
-                <span>(240)-764-9968</span>
+                <img src="/assets/Phone.png" alt="Phone Icon">
+                <span class="contact-info-title desktop">Number</span>
+                <span class="contact-info-info">(240)-764-9968</span>
             </div>
             <div class="contact-info-box">
-                <img src="/assets/Phone.png" alt="">
-                <span class="contact-info-title">Phone Number</span>
-                <span>(240)-764-9968</span>
+                <img src="/assets/Email.png" alt="Email Icon">
+                <span class="contact-info-title desktop">Email</span>
+                <span class="contact-info-info">Info@SpartaConstructionDMV.com</span>
+            </div>
+            <div class="contact-info-box">
+                <img src="/assets/Clock.png" alt="Email Icon">
+                <span class="contact-info-title desktop">Hours</span>
+                <span class="contact-info-info">24/7 Service</span>
+            </div>
+            <div class="contact-info-box">
+                <img src="/assets/Location.png" alt="Email Icon">
+                <span class="contact-info-title desktop">Location</span>
+                <span class="contact-info-info">Servicing the DMV area</span>
             </div>
         </div>
     </div>
     <form method="POST" id="form">
-    <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+    <span>Reach out to us directly!</span>
+    <input type="hidden" name="access_key" value="d97bfcb5-0fbb-43b7-b4ec-e3e4bc3e0c59">
     <label for="name">Name</label>
     <input type="text" name="name" placeholder="Your name" required>
     <label for="Phone">Phone</label>
     <input type="tel" name="phone" placeholder="Your number" required>
     <label for="email">Email</label>
     <input type="email" name="email" placeholder="Your email" required>
+    <label for="email">Select Service</label>
+            <div class="custom-select">
+            <select name="job-type" id="job-type">
+                <option value="N/A" selected>Select Service:</option>
+                <option value="Drywall">Drywall</option>
+                <option value="Electrical">Electrical</option>
+                <option value="Flooring">Flooring</option>
+                <option value="Outdoor">Outdoor</option>
+                <option value="Painting">Painting</option>
+                <option value="Plumbing">Plumbing</option>
+                <option value="Repairs">Repairs</option>
+                <option value="Roofing">Roofing</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
     <label for="message">Message</label>
     <textarea name="message" placeholder="Tell us more..."></textarea>
     <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
@@ -35,3 +63,5 @@
 
     </form>
 </section>
+
+<div class="Contact-buffer mobile"></div>
